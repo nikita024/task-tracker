@@ -4,7 +4,7 @@
   background-color: #f5f5f5;
  }
  
- /* Navbar Styles */
+ 
  .navbar {
    display: flex;
    justify-content: space-between;
@@ -44,7 +44,7 @@
  
  
  
- /* Login Style */
+
  .login-container {
    display: flex;
    align-items: center;
@@ -110,7 +110,7 @@
  }
  
  
- /* Dashboard Styles */
+
  .dashboard-container {
    padding: 2rem;
  }
@@ -120,7 +120,7 @@
    text-align: center;
  }
  
- /* TaskTable Styles */
+
  .task-table {
    padding: 20px;
    background-color: #ffffff;
@@ -241,7 +241,7 @@
    color: #ffffff;
    padding: 6px 10px;
    border-radius: 4px;
-   /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
+  
  }
  
  
@@ -264,7 +264,7 @@
    border-radius: 5px;
  }
  
- /* TaskForm Styles */
+
  
  .task-form {
    max-width: 400px;
@@ -378,9 +378,7 @@
    cursor: pointer;
  }
  
-
- @media (max-width: 480px) {
-  /* For mobile phones */
+@media (max-width: 480px) {
   .navbar {
     padding: 10px;
     box-shadow: none;
@@ -415,12 +413,19 @@
 
   .task-table {
     padding: 10px;
-    overflow-x: scroll;
+    overflow-x: auto; 
   }
 
   .task-table table {
     width: 100%;
     font-size: 0.8rem;
+    white-space: nowrap; 
+    table-layout: auto; 
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 8px; 
   }
 
   .task-chart {
@@ -443,4 +448,3 @@
     font-size: 0.8rem;
   }
 }
- 
