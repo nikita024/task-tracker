@@ -10,10 +10,9 @@ This project was bootstrapped with [task-tracker](https://github.com/nikita024/t
 
 In the project directory, you can run:
 
-- `npm start`: Runs the app in the development mode. Open [http://localhost:3000/login](http://localhost:3000) to view it in the browser.
-- `npm test`: Launches the test runner in the interactive watch mode.
+- `npm install`: Install the packages.
+- `npm start`: Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - `npm run build`: Builds the app for production to the `build` folder.
-- `npm run eject`: Removes the single build dependency from your project.
 
 ## Login Feature
 
@@ -34,5 +33,25 @@ The application includes a login feature where users can log in using specific c
       "password": "admin123"
     }
 ]
+```
+
+## Project Features
+
+### Create Task:
+Users can add new tasks by filling in task details like task name, description, and status.
+
+### Edit Task:
+Users can update the task details such as name, description, and status after creation.
+
+### Delete Task:
+Users have the option to delete tasks from the task list.
+
+### View Tasks in a Table:
+All tasks are displayed in a table format, showing relevant task details for easy tracking and management.
+
+### Task Chart Visualization:
+The project includes a visual representation of tasks through charts, allowing users to see an overview of task completion and status distribution.
+
+
 
 
