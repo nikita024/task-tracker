@@ -1,38 +1,446 @@
-.App {
-  text-align: center;
-}
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+ }
+ 
+ /* Navbar Styles */
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   background-color: #fff;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .navbar-logo {
+   font-size: 1.5em;
+   font-weight: bold;
+ }
+ 
+ .navbar-right {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+ }
+ 
+ .navbar-username {
+   font-size: 1em;
+ }
+ 
+ .logout-button {
+   padding: 5px 10px;
+   background-color: #ff4757;
+   border: none;
+   border-radius: 5px;
+   color: #fff;
+   cursor: pointer;
+ }
+ 
+ .logout-button:hover {
+   background-color: #ff6b81;
+ }
+ 
+ 
+ 
+ /* Login Style */
+ .login-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background-color: #f5f5f5;
+ }
+ 
+ .login-card {
+   width: 100%;
+   max-width: 400px;
+   padding: 2rem;
+   background-color: #ffffff;
+   border-radius: 8px;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+ }
+ 
+ .login-card h2 {
+   font-size: 1.8rem;
+   margin-bottom: 1rem;
+   color: #333;
+ }
+ 
+ .login-card form {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .login-card input {
+   padding: 0.8rem;
+   margin-bottom: 1rem;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 1rem;
+   color: #333;
+ }
+ 
+ .login-card input:focus {
+   border-color: #007bff;
+   outline: none;
+   box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.25);
+ }
+ 
+ .login-card button {
+   padding: 0.8rem;
+   font-size: 1rem;
+   color: #fff;
+   background-color: #007bff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+ 
+ .login-card button:hover {
+   background-color: #0056b3;
+ }
+ 
+ .error {
+   color: #e74c3c;
+   margin-top: 0.5rem;
+ }
+ 
+ 
+ /* Dashboard Styles */
+ .dashboard-container {
+   padding: 2rem;
+ }
+ 
+ .dashboard-container h1 {
+   color: #333;
+   text-align: center;
+ }
+ 
+ /* TaskTable Styles */
+ .task-table {
+   padding: 20px;
+   background-color: #ffffff;
+   border-radius: 8px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   max-width: 100%;
+   overflow-x: auto;
+ }
+ 
+ .task-table h2 {
+   color: #333;
+   text-align: center;
+   margin-bottom: 15px;
+ }
+ 
+ .task-table table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+ 
+ .task-table th,
+ .task-table td {
+   padding: 12px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+ }
+ 
+ .task-table th {
+   background-color: #ccc;
+   color: #333;
+   font-weight: 600;
+ }
+ 
+ .task-table tr:nth-child(even) {
+   background-color: #f9f9f9;
+ }
+ 
+ .task-table tr:hover {
+   background-color: #f1f1f1;
+ }
+ 
+ .task-table input[type="text"],
+ .task-table select {
+   width: 90%;
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+ 
+ .task-table button {
+   padding: 6px 10px;
+   font-size: 0.9em;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   margin-right: 5px;
+ }
+ 
+ .task-table button:hover {
+   opacity: 0.9;
+ }
+ 
+ .task-table button:focus {
+   outline: none;
+ }
+ 
+ .task-table button:nth-child(1) {
+   background-color: #0D92F4;
+   color: white;
+ }
+ 
+ .task-table button:nth-child(2) {
+   background-color: #f44336;
+   color: white;
+ }
+ 
+ .task-table button:nth-child(1):hover {
+   background-color: #159afa;
+ }
+ 
+ .task-table button:nth-child(2):hover {
+   background-color: #e53935;
+ }
+ 
+ .task-chart {
+   margin-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #ffffff;
+   border-radius: 8px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   max-width: 100%;
+   overflow-x: auto;
+ }
+ 
+ .chart-container {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   max-width: 800px;
+   gap: 20px;
+ }
+ 
+ .chart {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 20px;
+ }
+ 
+ .chart-title {
+   font-size: 16px;
+   font-weight: 600;
+   margin-bottom: 10px;
+   background-color: #0D92F4;
+   color: #ffffff;
+   padding: 6px 10px;
+   border-radius: 4px;
+   /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
+ }
+ 
+ 
+ .add-task-button {
+   background-color: #0D92F4;
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-bottom: 20px;
+ }
+ 
+ .task-form-container {
+   background-color: #ffffff;
+   padding: 20px;
+   margin-bottom: 20px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+ }
+ 
+ /* TaskForm Styles */
+ 
+ .task-form {
+   max-width: 400px;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: #f7f7f7;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .task-form h2 {
+   text-align: center;
+   color: #333;
+   margin-bottom: 20px;
+   font-size: 1.5em;
+ }
+ 
+ .task-form input[type="text"],
+ .task-form textarea {
+   width: 95%;
+   padding: 10px;
+   margin: 8px 0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1em;
+   color: #555;
+ }
+ 
+ .task-form select {
+   width: 100%;
+   padding: 10px;
+   margin: 8px 0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1em;
+   color: #555;
+ }
+ 
+ .task-form textarea {
+   resize: vertical;
+   min-height: 80px;
+ }
+ 
+ .task-form input[type="text"]:focus,
+ .task-form textarea:focus,
+ .task-form select:focus {
+   outline: none;
+   border-color: #0D92F4;
+   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+ }
+ 
+ .task-form select {
+   height: 40px;
+   background-color: #fff;
+   color: #555;
+ }
+ 
+ .task-form button[type="submit"] {
+   width: 100%;
+   padding: 10px;
+   background-color: #0D92F4;
+   color: white;
+   font-size: 1.1em;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 15px;
+ }
+ 
+ .task-form button[type="submit"]:hover {
+   background-color: #159afa;
+ }
+ 
+ .task-form button[type="submit"]:focus {
+   outline: none;
+   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+ }
+ 
+ 
+ 
+ .modal-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.6);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+ }
+ 
+ .modal-content {
+   background: transparent;
+   padding: 20px;
+   border-radius: 8px;
+   width: 90%;
+   max-width: 500px;
+   position: relative;
+ }
+ 
+ .modal-close {
+   position: absolute;
+   top: 10px;
+   right: 30px;
+   font-size: 1.5rem;
+   background: none;
+   border: none;
+   cursor: pointer;
+ }
+ 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ @media (max-width: 480px) {
+  /* For mobile phones */
+  .navbar {
+    padding: 10px;
+    box-shadow: none;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .navbar-logo {
+    font-size: 1.2em;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .login-card {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  .login-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .login-card input {
+    padding: 0.6rem;
+  }
+
+  .login-card button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .task-table {
+    padding: 10px;
+    overflow-x: scroll;
+  }
+
+  .task-table table {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .task-chart {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .chart-container {
+    flex-direction: column;
+  }
+
+  .task-form {
+    padding: 10px;
+  }
+
+  .task-form input[type="text"],
+  .task-form textarea,
+  .task-form select {
+    width: 100%;
+    font-size: 0.8rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ 
