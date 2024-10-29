@@ -19,7 +19,7 @@ const Dashboard = () => {
     if (!loggedIn) {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <>
